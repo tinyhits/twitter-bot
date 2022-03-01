@@ -43,17 +43,17 @@ def run_bot(input_file: str, wait_time_hours: float) -> None:
 
                     id_of_thread_tweet_to_reply_to = call_return_status.id
 
-                time.sleep(60*60*wait_time_hours)  # turn hours into seconds
+                time.sleep(60*60*25)  # turn hours into seconds
 
             except tweepy.error.TweepError as e:
                 logging.error(e)
 
 
 def create_api() -> tweepy.API:
-    consumer_key = os.getenv("CONSUMER_KEY")
-    consumer_secret = os.getenv("CONSUMER_SECRET")
-    access_token = os.getenv("ACCESS_TOKEN")
-    access_token_secret = os.getenv("ACCESS_TOKEN_SECRET")
+    consumer_key = os.getenv("2900542709-8qc9vzERm7uHycry41JCaLlhp6vQhaTKmThZmEb")
+    consumer_secret = os.getenv("asuw4JcFSzsMtEr5SYjq0DnAVpuu3IGe5TUZDgMRC6W7j")
+    access_token = os.getenv("worp6OeZ59utWMTqHcSysHuL0")
+    access_token_secret = os.getenv("4Jr4Af0vfQJPgjiUL5BLUrXi3xRmvikQlhMNcD9ZQM4stRO3QI")
 
     auth = tweepy.OAuthHandler(consumer_key, consumer_secret)
     auth.set_access_token(access_token, access_token_secret)
